@@ -164,7 +164,11 @@ const updateModules = (type, modules) =>
   const deps = shrink(readPkg(), keys)
 
   verbose && console.log('Removing yarn.lock and node_modules')
-  cp.execSync('rm -rf node_modules yarn.lock')
+
+  const nodeModules = path.resolve(base, 'node_modules')
+  const lockFile = path.resolve(base, 'yarn.lock')
+
+  cp.execSync(`rm -rf ${nodeModules} ${lockFile}`)
 
   for (let i in keys) {
     if (!keys.hasOwnProperty(i)) continue
