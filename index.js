@@ -145,7 +145,7 @@ const updateModules = (type, modules) =>
 
     verbose && console.log('  yarn', modules.join(' '))
 
-    const cmd = cp.spawn('yarn', modules, { cwd: __dirname })
+    const cmd = cp.spawn('yarn', modules, { cwd: base })
 
     cmd.stdout.on('data', vLog)
     cmd.stderr.on('data', vLog)
