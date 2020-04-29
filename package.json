@@ -1,0 +1,11 @@
+{
+  "name": "update-dependencies",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "bin": "index.js",
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "ora": "^4.0.4"
+  }
+}
